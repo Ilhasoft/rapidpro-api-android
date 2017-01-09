@@ -1,3 +1,3 @@
-# RapidPro Java
+# RapidPro Android API
 
-RapidPro.io's Java API 
+RapidPro.io's Android API 
