@@ -1,2 +1,3 @@
-# rapidpro-java
+# RapidPro Java
+
 RapidPro.io's Java API 
