@@ -76,4 +76,5 @@ public class RulesetResponse implements Parcelable {
             return new RulesetResponse[size];
         }
     };
+
 }
