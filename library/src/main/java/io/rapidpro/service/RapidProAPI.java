@@ -20,9 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class RapidProAPI {
 
-    private static final String BASE = "https://udo.ilhasoft.mobi/";
-
-    public static <T> T buildApi (Class<T> endPoint) {
+    public static <T> T buildApi (String host, Class<T> endPoint) {
         final OkHttpClient.Builder okHttpClient = new OkHttpClient.Builder();
         if (BuildConfig.DEBUG) {
             okHttpClient.addInterceptor(new HttpLoggingInterceptor()
@@ -36,7 +34,7 @@ public class RapidProAPI {
                 .create();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE)
+                .baseUrl(host)
                 .client(okHttpClient.build())
                 .addConverterFactory (GsonConverterFactory.create(gson))
                 .build();

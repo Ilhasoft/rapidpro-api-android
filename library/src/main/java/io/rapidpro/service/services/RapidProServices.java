@@ -22,9 +22,9 @@ public class RapidProServices {
     private final RapidProEndPoint rapidProEndPoint;
     private final GsonDateTypeAdapter gsonDateTypeAdapter;
 
-    public RapidProServices(String token) {
+    public RapidProServices(String host, String token) {
         this.token = token;
-        rapidProEndPoint = RapidProAPI.buildApi(RapidProEndPoint.class);
+        rapidProEndPoint = RapidProAPI.buildApi(host, RapidProEndPoint.class);
         gsonDateTypeAdapter = new GsonDateTypeAdapter();
     }
 
